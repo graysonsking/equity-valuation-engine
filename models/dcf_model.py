@@ -48,7 +48,10 @@ def value_company(financials: pd.Series, beta: float, **kwargs) -> dict:
         shares_outstanding=financials["shares_outstanding"],
     )
 
-    result = dcf.value(wacc=cost.wacc, terminal_growth=TERMINAL_GROWTH, **common)
+    import config as _cfg
+
+    wacc_used = max(cost.wacc, getattr(_cfg, "WACC_FLOOR", 0.0))
+    result = dcf.value(wacc=wacc_used, terminal_growth=TERMINAL_GROWTH, **common)
     grid = dcf.sensitivity_grid(WACC_RANGE, GROWTH_RANGE, **common)
 
     return {"result": result, "grid": grid, "cost_of_capital": cost}
