@@ -13,8 +13,8 @@
 | Peer statistics with trimming | Complete, tested |
 | Blending and ranking | Complete, tested |
 | Confidence flagging | Complete, tested |
-| Statement data connector | Not implemented |
-| Beta estimation | Not implemented, currently an input |
+| Statement data connector | Complete |
+| Beta estimation | Complete |
 | Published output | Not started |
 
 ## Next
