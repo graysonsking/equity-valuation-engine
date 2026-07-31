@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/30569264/README.md)
 # Equity Valuation Engine
 
 An automated fundamental valuation framework covering the S&P 500. Pulls financial statement data, builds a discounted cash flow model and a comparables screen for each name, and outputs a ranked valuation table.
